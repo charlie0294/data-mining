@@ -1,0 +1,117 @@
+Aim: Apply pre-processing and classification/regression techniques on a real-world dataset.
+Evaluate the performance of classification techniques using different parameter.
+Theory:
+Regression refers to a type of supervised machine learning technique that is used to predict any
+continuous-valued attribute. Regression helps any business organization to analyze the target
+variable and predictor variable relationships. It is a most significant tool to analyze the data
+that can be used for financial forecasting and time series modelling.
+Regression involves the technique of fitting a straight line or a curve on numerous data points.
+It happens in such a way that the distance between the data points and cure comes out to be the
+lowest.
+The most popular types of regression are linear and logistic regressions. Other than that, many
+other types of regression can be performed depending on their performance on an individual
+data set.
+Regression can predict all the dependent data sets, expressed in the expression of independent
+variables, and the trend is available for a finite period. Regression provides a good way to
+predict variables, but there are certain restrictions and assumptions like the independence of
+the variables, and inherent normal distributions of the variables. For example, suppose one
+considers two variables, A and B, and their joint distribution is a bivariate distribution, then by
+that nature. In that case, these two variables might be independent, but they are also correlated.
+The marginal distributions of A and B need to be derived and used. Before applying Regression
+analysis, the data needs to be studied carefully and perform certain preliminary tests to ensure
+the Regression is applicable. There are non-parametric tests that are available in such cases.
+About the Dataset Used:
+Ionosphere Dataset
+o Description: A dataset used for binary classification of radar signals.
+o Instances: 351
+o Attributes: 34 continuous numerical features representing radar signal attributes. 1 class
+label (good or bad signal).
+o Use Case: Model evaluation in ensemble methods (Bagging, Boosting, Voting), Naïve
+Bayes, Decision Trees, k-NN, SVM, and Logistic Regression.
+Steps:
+Linear Regression:
+Choose the linear regression algorithm:
+• Click the “Choose” button and select “LinearRegression” under the “functions” group.
+• Click on the name of the algorithm to review the algorithm configuration
+Weka can detect and remove highly correlated input attributes automatically by setting
+eliminateColinearAttributes to True, which is the default. Also, Weka can automatically
+14
+perform feature selection to only select those relevant attributes by setting the
+attributeSelectionMethod. This is enabled by default and can be disabled.
+Finally, the Weka implementation uses a ridge regularization technique in order to reduce the
+complexity of the learned model. It does this by minimizing the square of the absolute sum of
+the learned coefficients, which will prevent any specific coefficient from becoming too large
+(a sign of complexity in regression models).
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Boston house price dataset.
+Logistic Regression:
+The logistic regression only supports binary classification problems, although the Weka
+implementation has been adapted to support multi-class classification problems.
+Choose the logistic regression algorithm:
+• Click the “Choose” button and select “Logistic” under the “functions” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+The algorithm can run for a fixed number of iterations (maxIts), but by default will run until
+it is estimated that the algorithm has converged.
+The implementation uses a ridge estimator which is a type of regularization. This method seeks
+to simplify the model during training by minimizing the coefficients learned by the model. The
+ridge parameter defines how much pressure to put on the algorithm to reduce the size of the
+coefficients. Setting this to 0 will turn off this regularization
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+Naïve Bayes:
+Choose the Naive Bayes algorithm:
+• Click the “Choose” button and select “NaiveBayes” under the “bayes” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+By default, a Gaussian distribution is assumed for each numerical attribute.
+We can change the algorithm to use a kernel estimator with the useKernelEstimator argument
+that may better match the actual distribution of the attributes in your dataset. Alternately, you
+can automatically convertnumerical attributes to nominal attributes
+with the useSupervisedDiscretization parameter.
+15
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+Decision Tree:
+Choose the decision tree algorithm:
+• Click the “Choose” button and select “REPTree” under the “trees” group.
+• Click on the name of the algorithm to review the algorithm configuration
+The depth of the tree is defined automatically, but a depth can be specified in the maxDepth
+attribute. We can also choose to turn of pruning by setting the noPruning parameter to True,
+although this may result in worse performance. The minNum parameter defines the minimum
+number of instances supported by the tree in a leaf node when constructing the tree from the
+training data.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+k-Nearest Neighbors:
+When making predictions on classification problems, KNN will take the mode (most common
+class) of the k most similar instances in the training dataset.
+Choose the k-Nearest Neighbors algorithm:
+• Click the “Choose” button and select “IBk” under the “lazy” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+The size of the neighbourhood is controlled by the k parameter. Another important parameter
+is the distance measure used. This is configured in the nearestNeighbourSearchAlgorithm
+which controls the way in which the training data is stored and searched.
+The default is a LinearNNSearch. Clicking the name of this search algorithm will provide
+another configuration window where you can choose a distanceFunction parameter. By default,
+Euclidean distance is used to calculate the distance between instances, which is good for
+numerical data with the same scale. Manhattan distance is good to use if your attributes differ
+in measures or type.
+It is a good idea to try a suite of different k values and distance measures on your problem and
+see what works best.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+16
+Support Vector Machines:
+Choose the SVM algorithm:
+• Click the “Choose” button and select “SMO” under the “function” group.
+• Click on the name of the algorithm to review the algorithm configuration. SMO refers
+to the specific efficient optimization algorithm used inside the SVM implementation,
+which stands for Sequential Minimal Optimization.
+C parameter, called the complexity parameter in Weka controls how flexible the process for
+drawing the line to separate the classes can be. A value of 0 allows no violations of the margin,
+whereas the default is 1.
+A popular and powerful kernel is the RBF Kernel or Radial Basis Function Kernel that is
+capable of learning closed polygons and complex shapes to separate the classes.
+It is a good idea to try a suite of different kernels and C (complexity) values on your problem
+and see what works best.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
