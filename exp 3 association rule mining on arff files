@@ -1,0 +1,29 @@
+Aim: Apply association rule mining on ARFF files using WEKA.
+Theory: Association rule learning is a type of unsupervised learning technique that checks for
+the dependency of one data item on another data item and maps accordingly so that it can be
+more profitable. It tries to find some interesting relations or associations among the variables
+of dataset. It is based on different rules to discover the interesting relations between variables
+in the database.
+About the Dataset Used:
+Supermarket Dataset (supermarket.arff)
+o Description: A dataset containing transactional records of a supermarket, used for
+association rule mining.
+o Instances: 4627
+o Attributes: 217 (Each attribute represents a product, indicating whether it was purchased in
+a transaction.)
+o Data Type: Binary (1 for purchased, 0 for not purchased)
+o Use Case: Market basket analysis using the Apriori algorithm to find associations between
+frequently bought products.
+Steps:
+Step 1: In the WEKA explorer, open the Preprocess tab, click on the Open file ... button and
+select supermarket.arff database from the installation folder
+The database contains 4627 instances and 217 attributes. In order to identify the association
+between such a large number of attributes, this task is automated with the help of Apriori
+algorithm.
+Step 2: Click on the Associate TAB and click on the Choose button. Select the Apriori
+association.
+Step 3: To set the parameters for the Apriori algorithm, click on its name. A window will pop
+up that allows us to set the parameters:
+Output:
+At the bottom, we’ll find the identified best rules of associations that will help the supermarket
+in stocking their products in appropriate shelves.
