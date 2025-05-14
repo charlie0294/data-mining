@@ -1,0 +1,9 @@
+Aim: Study of DBMINER tool.
+Theory:
+A data mining system, DBMiner, has been developed for interactive mining of multiple-level
+knowledge in large relational databases and data warehouses. The system implements a wide
+spectrum of data mining functions, including characterization, comparison, association,
+classification, prediction, and clustering. By incorporating several interesting data mining
+techniques, including OLAP and attribute-oriented induction, statistical analysis, progressive
+deepening for mining multiple-level knowledge, and meta-rule-guided mining, the system
+provides a user-friendly, interactive data mining environment with good performance.
