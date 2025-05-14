@@ -1,0 +1,61 @@
+Aim: Implementation of Bagging and Boosting techniques on ARFF files using WEKA.
+Theory: Ensemble learning helps improve machine learning results by combining several
+models. This approach allows the production of better predictive performance compared to a
+single model. Basic idea is to learn a set of classifiers (experts) and to allow them to vote.
+Bagging and Boosting are two types of Ensemble Learning. These two decrease the variance
+of a single estimate as they combine several estimates from different models. So, the result may
+be a model with higher stability. Let’s understand these two terms in a glimpse.
+o Bagging: It is a homogeneous weak learners’ model that learns from each other
+independently in parallel and combines them for determining the model average.
+o Boosting: It is also a homogeneous weak learners’ model but works differently from
+Bagging. In this model, learners learn sequentially and adaptively to improve model
+predictions of a learning algorithm.
+About the Dataset Used:
+Ionosphere Dataset
+o Description: A dataset used for binary classification of radar signals.
+o Instances: 351
+o Attributes: 34 continuous numerical features representing radar signal attributes. 1 class
+label (good or bad signal).
+o Use Case: Model evaluation in ensemble methods (Bagging, Boosting, Voting), Naïve
+Bayes, Decision Trees, k-NN, SVM, and Logistic Regression.
+Steps:
+Bagging:
+Step 1: Choose the bagging algorithm:
+• Click the “Choose” button and select “Bagging” under the “meta” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+• A key configuration parameter in bagging is the type of model being bagged. The
+default is the which is the Weka implementation of a standard decision tree, also called
+a REPTree
+• Classification and Regression Tree or CART for short. This is specified in the classifier
+parameter.
+• The size of each random sample is specified in the bagSizePercent, which is a size as a
+percentage of the raw training dataset. The default is 100% which will create a new
+random sample the same size as the training dataset, but will have a different
+composition.
+Step 2: Finally, the number of bags (and number of classifiers) can be specified in the
+numIterations parameter. The default is 10, although it is common to use values in the hundreds
+7
+or thousands. Continue to increase the value of numIterations until you no longer see an
+improvement in the model, or you run out of memory.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+• You can see that with the default configuration that bagging achieves an accuracy of
+91%.
+Boosting:
+Step 1: Each instance in the training dataset is weighted and the weights are updated based on
+the overall accuracy of the model and whether an instance was classified correctly or not.
+Subsequent models are trained and added until a minimum accuracy is achieved or no further
+improvements are possible. Each model is weighted based on its skill and these weights are
+used when combining the predictions from all of the models on new data.
+Choose the Boosting algorithm:
+• Click the “Choose” button and select “AdaBoostM1” under the “meta” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+Step 2: The weak learner within the AdaBoost model can be specified by the classifier
+parameter.
+The default is the decision stump algorithm, but other algorithms can be used. a key parameter
+in addition to the weak learner is the number of models to create and add in series. This can be
+specified in the num Iterations parameter and defaults to 10.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset.
+• You can see that with the default configuration that AdaBoost achieves an accuracy of
+90%.
