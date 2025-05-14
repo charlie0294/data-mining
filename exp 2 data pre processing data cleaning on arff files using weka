@@ -1,0 +1,71 @@
+Aim: Perform data pre-processing including cleaning, integration, and transformation on
+ARFF files using WEKA.
+Theory:
+Data preprocessing is an important step in the data mining process. It refers to the cleaning,
+transforming, and integrating of data in order to make it ready for analysis. The goal of data
+preprocessing is to improve the quality of the data and to make it more suitable for the specific
+data mining task.
+• Data Cleaning: This involves identifying and correcting errors or inconsistencies in the
+data, such as missing values, outliers, and duplicates. Various techniques can be used
+for data cleaning, such as imputation, removal, and transformation.
+• Data Integration: This involves combining data from multiple sources to create a
+unified dataset. Data integration can be challenging as it requires handling data with
+different formats, structures, and semantics. Techniques such as record linkage and data
+fusion can be used for data integration.
+• Data Transformation: This involves converting the data into a suitable format for
+analysis. Common techniques used in data transformation include normalization,
+standardization, and discretization. Normalization is used to scale the data to a common
+range, while standardization is used to transform the data to have zero mean and unit
+variance. Discretization is used to convert continuous data into discrete categories.
+About the Dataset Used:
+Weather Dataset (weather-nominal.arff & weather-numeric.arff)
+o Description: A small dataset used for classification problems, mainly in weather prediction
+and decision-making.
+o Instances: 14
+o Attributes:
+• Outlook (Nominal) – sunny, overcast, rainy
+• Temperature (Numeric/Nominal) – hot, mild, cold
+• Humidity (Numeric/Nominal) – high, normal
+• Windy (Boolean) – true, false
+• Play (Boolean) – yes, no (Target variable)
+o Use Case: Classification and Data Preprocessing.
+Steps:
+To perform Data Preprocessing, we will use the Weather database that is provided in the
+installation.
+Step 1: Using the Open file option under the Preprocess tag, select the weather- nominal.arff
+file.
+3
+Step 2: When you open the file, your screen looks like as shown below.
+Step 3: Let us understand the Data. The highlighted Current relation sub window shows the
+name of the database that is currently loaded. Also, there are 14 instances i.e., the number of
+rows in the table and there 5 attributes - the fields in the table. On the left side, an Attributes
+sub window is present that displays the various fields in the database.
+Step 4: The weather database contains five fields - outlook, temperature, humidity, windy and
+play. After selecting an attribute from this list by clicking on it, further details on the attribute
+itself are displayed on the right.
+After clicking on the temperature attribute first, we would see the screen below:
+In the Selected Attribute subwindow, you can observe the following −
+• The name and the type of the attribute are displayed.
+• The type for the temperature attribute is Nominal.
+• The number of Missing values is zero.
+• There are three distinct values with no unique value.
+• The table underneath this information shows the nominal values for this field as hot,
+mild and cold.
+• It also shows the count and weight in terms of a percentage for each nominal value.
+Step 5: At the bottom of the window, we can see the visual representation of the class values.
+After selecting the Visualize All button, we would be able to see all features in one single
+window as shown below:
+Step 6: Removing Attributes- Many a time, the data that we use for model building comes with
+many irrelevant fields. To remove Attribute(s) select them and click on the Remove button at
+the bottom. The selected attributes would be removed from the database. After you fully
+preprocess the data, we can save it for model building.
+Step 7: Applying Filters- To illustrate the use of filters, we will use weather- numeric.arff
+database that contains two numeric attributes - temperature and humidity. We will convert these
+to nominal by applying a filter on our raw data. Click on the Choose button in the Filter subwindow and select the following filter:
+weka→filters→supervised→attribute→Discretize
+Click on the Apply button and examine the temperature and/or humidity attribute. We would
+notice that these have changed from numeric to nominal types.
+Let us look into another filter now. Suppose we want to select the best attributes for deciding
+the play. Select and apply the following filter:
+weka→filters→supervised→attribute→AttributeSelection
+The temperature and humidity attributes from the database are removed.
