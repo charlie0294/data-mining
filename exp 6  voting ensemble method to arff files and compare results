@@ -1,0 +1,29 @@
+Aim: Apply the concept of Voting ensemble method to ARFF files and compare the results
+with single classifiers.
+Theory: Voting ensembles are the ensembles technique that trains the multiple machine
+learning models, and then predictions from all the individual models are combined for output.
+About the Dataset Used:
+Ionosphere Dataset
+o Description: A dataset used for binary classification of radar signals.
+o Instances: 351
+o Attributes: 34 continuous numerical features representing radar signal attributes. 1 class
+label (good or bad signal).
+o Use Case: Model evaluation in ensemble methods (Bagging, Boosting, Voting), Naïve
+Bayes, Decision Trees, k-NN, SVM, and Logistic Regression.
+Steps:
+Step 1: Choose the Vote algorithm:
+• Click the “Choose” button and select “Vote” under the “meta” group.
+• Click on the name of the algorithm to review the algorithm configuration.
+The key parameter of a Vote ensemble is the selection of sub-models.
+Step 2: Models can be specified in Weka in the classifier parameter. Clicking this parameter
+lets you add a number of classifiers.
+Step 3: Clicking the “Edit” button with a classifier selected lets you configure the details of
+that classifier. An objective in selecting sub-models is to select models that make quite different
+predictions (uncorrelated predictions). As such, it is a good rule of thumb to select very
+different model types, such as trees, instance-based methods, functions and so on.
+Step 4: Another key parameter to configure for voting is how the predictions of the sub-models
+are combined. This is controlled by the combination Rule parameter which is set to take the
+average of the probabilities by default.
+• Click “OK” to close the algorithm configuration.
+• Click the “Start” button to run the algorithm on the Ionosphere dataset. Using the
+default configuration, Vote achieves an accuracy of 64%.
