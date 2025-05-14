@@ -1,0 +1,54 @@
+Aim: Implementation of Visualization technique on ARFF files using WEKA.
+Theory: Data visualization is actually a set of data points and information that are represented
+graphically to make it easy and quick for user to understand. Data visualization is good if
+it has a clear meaning, purpose, and is very easy to interpret, without requiring context.
+Tools of data visualization provide an accessible way to see and understand trends, outliers,
+and patterns in data by using visual effects or elements such as a chart, graphs, and maps.
+Characteristics of Effective Graphical Visual:
+• It shows or visualizes data very clearly in an understandable manner.
+• It encourages viewers to compare different pieces of data.
+• It closely integrates statistical and verbal descriptions of data set.
+• It grabs our interest, focuses our mind, and keeps our eyes on message as
+human brain tends to focus on visual data more than written data.
+• It also helps in identifying area that needs more attention and improvement.
+• Using graphical representation, a story can be told more efficiently. Also, it
+requires less time to understand picture than it takes to understand textual data.
+About the Dataset Used:
+Iris Dataset (iris.arff)
+o Description: A well-known dataset used for classification and clustering tasks.
+o Instances: 150
+o Attributes:
+• Sepal length (Numeric)
+• Sepal width (Numeric)
+• Petal length (Numeric)
+• Petal width (Numeric)
+o Class label (Nominal) – Iris-setosa, Iris-versicolor, Iris-virginica
+o Use Case: Visualization, Clustering, and Classification.
+Steps:
+Step 1: Go to the Preprocess tab and open IRIS.arff dataset.
+Step 2: The dataset has 4 attributes and 1 class label as shown below:
+Step 3: To visualize the dataset, go to the Visualize tab. The tab shows the attributes plot matrix.
+The dataset attributes are marked on the x-axis and y-axis while the instances are plotted. The
+box with the x-axis attribute and y-axis attribute can be enlarged.
+Step 4: Click on the box of the plot to enlarge. For example, x: petal length and y: petalwidth.
+The class labels are represented in different colors (which can be changed):
+10
+• Class label- Iris-setosa: blue color
+• Class label- Iris-versicolor: red
+• Class label-Iris-virginica-green
+Step 5: Click on the instance represented by ‘x’ in the plot. It will give the instance details.
+Some of the points in the plot appear darker than other points. These points represent 2 or more
+instances with the same class label and the same value of attributes plotted on the graph such
+as petalwidth and petallength.
+The figure below represents a point with 2 instances of information.
+Step 6: The X and Y-axis attributes can be changed from the right panel in Visualize graph.
+Step 7: The Jitter tab is used to add randomness to the plot. Sometimes the points overlap. With
+jitter tab, the darker spots represent multiple instances.
+Step 8: To get a clearer view of the dataset and remove outliers, the user can select an instance
+from the dropdown. Click on the “select instance” dropdown. Choose “Rectangle”. With this,
+the user will be able to select points in the plot by plotting a rectangle.
+Step 9: Click on “Submit”. Only the selected dataset points will be displayed and the other
+points will be excluded from the graph. The figure below shows the points from the selected
+rectangular shape. The plot represents points with only 3 class labels. The user can click on
+“Save” to save the dataset or “Reset” to select another instance. The dataset will be saved a
+separately.ARFF file.
