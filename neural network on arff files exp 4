@@ -1,0 +1,22 @@
+Aim: Implementation of Neural Network technique on ARFF files using WEKA
+Theory: A neural network is a series of algorithms that endeavors to recognize underlying
+relationships in a set of data through a process that mimics the way the human brain operates.
+In this sense, neural networks refer to systems of neurons, either organic or artificial in nature.
+About the Dataset Used:
+Weather Dataset (weather-nominal.arff & weather-numeric.arff)
+o Description: A small dataset used for classification problems, mainly in weather prediction
+and decision-making.
+o Instances: 14
+o Attributes:
+• Outlook (Nominal) – sunny, overcast, rainy
+• Temperature (Numeric/Nominal) – hot, mild, cold
+• Humidity (Numeric/Nominal) – high, normal
+• Windy (Boolean) – true, false
+• Play (Boolean) – yes, no (Target variable)
+o Use Case: Classification and Data Preprocessing.
+Steps:
+Step 1: Open Weka and open file weather
+Step 2: Click classify then choose function Multilayer perceptron
+Step 3: Choose test options use training set and start
+Step 4: Change GUI true and press start
+Step 5: Change hidden layers numbers
